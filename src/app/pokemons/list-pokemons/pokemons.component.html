@@ -4,6 +4,10 @@
 
 <search-pokemon></search-pokemon>
 
+<div class="section center">
+    <button class="waves-effect waves-light btn" (click)="goAddPokemon()">Ajouter un Pokémon</button>
+</div>
+
   <div class="row">
     <!-- ngFor permet de parcourir un tableau de donnnées -->
     <div *ngFor="let pokemon of pokemons" class="col s6 m4" >

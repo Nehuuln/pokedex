@@ -1,4 +1,4 @@
-<form *ngIf="pokemon" (ngSubmit)="onSubmit()"  #pokemonForm="ngForm">
+<form *ngIf="pokemon" (ngSubmit)="onSubmit()" #pokemonForm="ngForm">
 
   <div class="row">
     <div class="col s8 offset-s2">
@@ -6,51 +6,34 @@
 
         <div class="form-group">
           <label for="name">Nom</label>
-          <input type="text" class="form-control" id="name" 
-            required 
-            pattern="^[a-zA-Zàéèç]{1,25}$"
-            [(ngModel)] = "pokemon.name"
-            name="name"
-            #name="ngModel"
-          >
-          <div [hidden]="name.valid || name.pristine"  class="card-panel red accent-1">
-            Le nom du pokemon est requis entre 1 et 25 caractères
+          <input type="text" class="form-control" id="name" required pattern="^[a-zA-Zàéèç -]{1,30}$"
+            [(ngModel)]="pokemon.name" name="name" #name="ngModel">
+          <div [hidden]="name.valid || name.pristine" class="card-panel red accent-1">
+            Le nom du pokemon est requis entre 1 et 30 caractères
           </div>
         </div>
 
         <div class="form-group">
           <label for="name">Point de vie</label>
-          <input type="number" class="form-control" id="hp" 
-            required 
-            pattern="^[0-9]{1,3}$"
-            [(ngModel)] = "pokemon.hp"
-            name="hp"
-            #hp="ngModel"
-          >
-          <div [hidden]="hp.valid || hp.pristine"  class="card-panel red accent-1">
+          <input type="number" class="form-control" id="hp" required pattern="^[0-9]{1,3}$" [(ngModel)]="pokemon.hp"
+            name="hp" #hp="ngModel">
+          <div [hidden]="hp.valid || hp.pristine" class="card-panel red accent-1">
             Les points de vie du pokémon est compris entre 0 et 999.
           </div>
         </div>
 
         <div class="form-group">
           <label for="cp">Dégât</label>
-          <input type="number" class="form-control" id="cp" 
-            required 
-            pattern="^[0-9]{1,2}$"
-            [(ngModel)] = "pokemon.cp"
-            name="cp"
-            #cp="ngModel"
-          >
-          <div [hidden]="cp.valid || cp.pristine"  class="card-panel red accent-1">
+          <input type="number" class="form-control" id="cp" required pattern="^[0-9]{1,2}$" [(ngModel)]="pokemon.cp"
+            name="cp" #cp="ngModel">
+          <div [hidden]="cp.valid || cp.pristine" class="card-panel red accent-1">
             Les dégats du pokémon est compris entre 0 et 99.
           </div>
         </div>
 
         <div class="form-group">
           <label for="picture">Image (URL)</label>
-          <input type="text" class="form-control" id="picture"
-            [(ngModel)]="pokemon.picture"
-            name="picture">
+          <input type="text" class="form-control" id="picture" [(ngModel)]="pokemon.picture" name="picture">
         </div>
 
         <p *ngIf="pokemon.picture" class="center">
@@ -62,12 +45,7 @@
             <label for="rarete">Rareté</label>
             <p *ngFor="let rarete of raretes">
               <label>
-                <input type="radio"
-                class="with-gap"
-                name="rarete"
-                [value]="rarete"
-                [(ngModel)]="pokemon.rarete"
-                >
+                <input type="radio" class="with-gap" name="rarete" [value]="rarete" [(ngModel)]="pokemon.rarete">
                 <span [attr.for]="rarete">
                   <div class="{{ rarete }}">{{ rarete }}</div>
                 </span>
@@ -80,24 +58,20 @@
           <label for="types">Types</label>
           <p *ngFor="let type of types">
             <label>
-              <input type="checkbox"
-              class="filled-in"
-              [value]="type"
-              [checked]="hasType(type)"
-              [disabled]="!isTypeValid(type)"
-              (change)="selectType($event, type)"
-              >
-              <span [attr.for]="type" >
+              <input type="checkbox" class="filled-in" [value]="type" [checked]="hasType(type)"
+                [disabled]="!isTypeValid(type)" (change)="selectType($event, type)">
+              <span [attr.for]="type">
                 <div class="{{ type | pokemonTypeColor }}">{{ type }}</div>
-              </span>  
-            </label> 
+              </span>
+            </label>
           </p>
         </form>
         <div class="divider"></div>
         <div class="section center">
-          <button type="submit" class="waves-effect waves-light btn" [disabled]="!pokemonForm.form.valid" >Valider</button>
+          <button type="submit" class="waves-effect waves-light btn"
+            [disabled]="!pokemonForm.form.valid">Valider</button>
         </div>
-      
+
       </div>
     </div>
   </div>

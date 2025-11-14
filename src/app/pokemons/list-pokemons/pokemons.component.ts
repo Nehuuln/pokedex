@@ -6,6 +6,7 @@ import { PokemonTypeColor } from '../pipes/pokemon-type-color.pipe';
 import { Router } from '@angular/router';
 import { PokemonsService } from '../pokemons.service';
 import { SearchPokemonComponent } from '../search-pokemon/search-pokemon.component';
+
 @Component({
   standalone: true,
   selector: 'list-pokemons',
@@ -37,4 +38,8 @@ export class PokemonsComponentTs implements OnInit {
     this.router.navigate(link);
   }
 
+  goAddPokemon(){
+    let link = ['/ajout-pokemon'];
+    this.router.navigate(link);
+  }
 }

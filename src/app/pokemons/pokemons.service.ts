@@ -58,6 +58,18 @@ export class PokemonsService{
       );
   }
 
+  //Permet d'ajouter un nouveau pokemon
+  addPokemon(pokemon: Pokemon): Observable<Pokemon>{
+    const httpOptions = {
+      headers: new HttpHeaders({ 'content-type' : 'application/json'})
+    };
+
+    return this.http.post<Pokemon>(this.pokemonsUrl, pokemon, httpOptions).pipe(
+        tap((newPokemon: Pokemon) => this.log(`added pokemon w/ id=${newPokemon.id}`)),
+        catchError(this.handleError<Pokemon>('addPokemon'))
+      );
+  }
+
    //Permet de mettre à jour le pokemon
   deletePokemon(pokemon: Pokemon): Observable<Pokemon>{ 
     const httpOptions = {

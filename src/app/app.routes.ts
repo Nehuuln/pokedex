@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { PokemonsComponentTs } from './pokemons/list-pokemons/pokemons.component';
 import { DetailPokemonComponent } from './pokemons/detail-pokemon/detail-pokemon.component';
 import { EditPokemonComponent } from './pokemons/edit-pokemon/edit-pokemon.component';
+import { AjoutPokemonComponent } from './pokemons/ajout-pokemon/ajout-pokemon.component';
 import { LoginComponent } from './auth/login/login.component';
 import { authGuard } from './auth/auth.guard';
 
@@ -10,5 +11,6 @@ export const routes: Routes = [
   { path: '', redirectTo: 'pokemon/all', pathMatch: 'full' }, //url par défaut 
   { path: 'pokemon/all', canActivate: [authGuard] ,loadComponent: () =>  PokemonsComponentTs },
   { path: 'pokemon/:id', canActivate: [authGuard], loadComponent: () => DetailPokemonComponent },
-  { path: 'pokemon/edit/:id', canActivate: [authGuard], loadComponent: () => EditPokemonComponent }
+  { path: 'pokemon/edit/:id', canActivate: [authGuard], loadComponent: () => EditPokemonComponent },
+  { path: 'ajout-pokemon', canActivate: [authGuard], loadComponent: () =>  AjoutPokemonComponent }
 ];
