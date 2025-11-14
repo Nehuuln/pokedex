@@ -14,7 +14,7 @@ export class Pokemon{
     this.id = 0;
     this.hp = 0;
     this.cp = 0;
-    this.name = "NoName";
+    this.name = "";
     this.picture = 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/pokedex/small/1.webp';
     this.types = [];
     this.rarete = '⭐';
