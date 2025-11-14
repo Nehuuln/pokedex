@@ -5,6 +5,7 @@ import { EditPokemonComponent } from './pokemons/edit-pokemon/edit-pokemon.compo
 import { AjoutPokemonComponent } from './pokemons/ajout-pokemon/ajout-pokemon.component';
 import { LoginComponent } from './auth/login/login.component';
 import { authGuard } from './auth/auth.guard';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -13,4 +14,5 @@ export const routes: Routes = [
   { path: 'pokemon/:id', canActivate: [authGuard], loadComponent: () => DetailPokemonComponent },
   { path: 'pokemon/edit/:id', canActivate: [authGuard], loadComponent: () => EditPokemonComponent },
   { path: 'ajout-pokemon', canActivate: [authGuard], loadComponent: () =>  AjoutPokemonComponent }
+  ,{ path: '**', loadComponent: () => NotFoundComponent }
 ];
