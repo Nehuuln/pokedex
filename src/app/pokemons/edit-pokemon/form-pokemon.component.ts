@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from "@angular/core";
 import { Pokemon } from "../donnees-pokemons/pokemon";
 import { FormsModule } from "@angular/forms";
 import { PokemonTypeColor } from "../pipes/pokemon-type-color.pipe";
+import { PokemonRaretePipe } from "../pipes/pokemon-rarete.pipe";
 import { CommonModule } from "@angular/common";
 import { Router } from "@angular/router";
 import { PokemonsService } from "../pokemons.service";
@@ -14,13 +15,15 @@ import { PokemonsService } from "../pokemons.service";
   imports: [
     CommonModule,
     FormsModule,
-    PokemonTypeColor
+    PokemonTypeColor,
+    PokemonRaretePipe
   ]
 })
 export class FormPokemonComponent implements OnInit{
 
   @Input() pokemon: any;
   types : any = [];
+  raretes : any = [];
 
   constructor(private router: Router, private pokemonsService: PokemonsService){
 
@@ -28,6 +31,7 @@ export class FormPokemonComponent implements OnInit{
 
   ngOnInit(): void {
     this.types = this.pokemonsService.getPokemonTypes();
+    this.raretes = this.pokemonsService.getPokemonRaretes();
   }
   
   //Détermine si le type passé en paramètre appartient ou non au pokémon en cours d'édition

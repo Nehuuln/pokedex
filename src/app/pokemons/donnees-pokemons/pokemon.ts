@@ -6,6 +6,7 @@ export class Pokemon{
   name: string;
   picture: string;
   types: Array<string>;
+  rarete: string;
   created: Date;
 
 
@@ -16,6 +17,7 @@ export class Pokemon{
     this.name = "NoName";
     this.picture = 'https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/pokedex/small/1.webp';
     this.types = ['plante'];
+    this.rarete = '⭐';
     this.created = new Date();
   }
 

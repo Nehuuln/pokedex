@@ -57,7 +57,26 @@
           <img [src]="pokemon.picture" alt="Aperçu image" style="max-width:200px; max-height:200px;">
         </p>
 
-        <form class="form-groupe">
+        <form>
+          <div class="form-group">
+            <label for="rarete">Rareté</label>
+            <p *ngFor="let rarete of raretes">
+              <label>
+                <input type="radio"
+                class="with-gap"
+                name="rarete"
+                [value]="rarete"
+                [(ngModel)]="pokemon.rarete"
+                >
+                <span [attr.for]="rarete">
+                  <div class="{{ rarete }}">{{ rarete }}</div>
+                </span>
+              </label>
+            </p>
+          </div>
+        </form>
+
+        <form class="form-group">
           <label for="types">Types</label>
           <p *ngFor="let type of types">
             <label>
@@ -69,7 +88,7 @@
               (change)="selectType($event, type)"
               >
               <span [attr.for]="type" >
-                <div class="{{ type | pokemonTypeColor}}"> {{ type }}</div>
+                <div class="{{ type | pokemonTypeColor }}">{{ type }}</div>
               </span>  
             </label> 
           </p>

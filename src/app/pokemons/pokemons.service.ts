@@ -78,7 +78,10 @@ export class PokemonsService{
     return ['Plante', 'Feu', 'Eau', 'Insecte', 'Normal', 'Electrik', 'Poison', 'Fée', 'Vol'];
   }
 
-  
+  getPokemonRaretes(): string[]{
+    return ['⭐', '⭐⭐', '⭐⭐⭐', '⭐⭐⭐⭐', '⭐⭐⭐⭐⭐'];
+  }
+
   searchPokemons(term: string): Observable<Pokemon[]>{
     if(!term.trim()){
       return of([]);

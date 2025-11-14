@@ -8,6 +8,7 @@ export const POKEMONS: Pokemon[] = [
         cp: 5,
         picture: "https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/pokedex/small/1.webp",
         types: ["Plante", "Poison"],
+        rarete: "⭐",
         created: new Date()
     },
     {
@@ -17,6 +18,7 @@ export const POKEMONS: Pokemon[] = [
         cp: 6,
         picture: "https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/pokedex/small/4.webp",
         types: ["Feu"],
+        rarete: "⭐",
         created: new Date()
     },
     {
@@ -26,6 +28,7 @@ export const POKEMONS: Pokemon[] = [
         cp: 4,
         picture: "https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/pokedex/small/7.webp",
         types: ["Eau"],
+        rarete: "⭐",
         created: new Date()
     },
     {
@@ -35,6 +38,7 @@ export const POKEMONS: Pokemon[] = [
         cp: 2,
         picture: "https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/pokedex/small/13.webp",
         types: ["Insecte", "Poison"],
+        rarete: "⭐",
         created: new Date()
     },
     {
@@ -44,6 +48,7 @@ export const POKEMONS: Pokemon[] = [
         cp: 7,
         picture: "https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/pokedex/small/16.webp",
         types: ["Normal", "Vol"],
+        rarete: "⭐",
         created: new Date()
     },
     {
@@ -53,6 +58,7 @@ export const POKEMONS: Pokemon[] = [
         cp: 6,
         picture: "https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/pokedex/small/19.webp",
         types: ["Normal"],
+        rarete: "⭐",
         created: new Date()
     },
     {
@@ -62,6 +68,7 @@ export const POKEMONS: Pokemon[] = [
         cp: 5,
         picture: "https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/pokedex/small/21.webp",
         types: ["Normal", "Vol"],
+        rarete: "⭐",
         created: new Date()
     },
     {
@@ -71,6 +78,7 @@ export const POKEMONS: Pokemon[] = [
         cp: 4,
         picture: "https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/pokedex/small/23.webp",
         types: ["Poison"],
+        rarete: "⭐",
         created: new Date()
     },
     {
@@ -80,6 +88,7 @@ export const POKEMONS: Pokemon[] = [
         cp: 7,
         picture: "https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/pokedex/small/25.webp",
         types: ["Electrik"],
+        rarete: "⭐⭐",
         created: new Date()
     },
     {
@@ -89,6 +98,7 @@ export const POKEMONS: Pokemon[] = [
         cp: 3,
         picture: "https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/pokedex/small/27.webp",
         types: ["Normal"],
+        rarete: "⭐",
         created: new Date()
     },
     {
@@ -98,6 +108,7 @@ export const POKEMONS: Pokemon[] = [
         cp: 5,
         picture: "https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/pokedex/small/35.webp",
         types: ["Fée"],
+        rarete: "⭐",
         created: new Date()
     },
     {
@@ -107,6 +118,7 @@ export const POKEMONS: Pokemon[] = [
         cp: 8,
         picture: "https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/pokedex/small/37.webp",
         types: ["Feu"],
+        rarete: "⭐",
         created: new Date()
     }
 ];
