@@ -12,7 +12,7 @@
     <!-- ngFor permet de parcourir un tableau de donnnées -->
     <div *ngFor="let pokemon of pokemons" class="col s6 m4" >
       
-      <div class="card horizontal" pkmnBorderCard (click)="selectPokemon(pokemon)">
+      <div class="card horizontal" pkmnBorderCard [rarityColor]="pokemon.rarete" (click)="selectPokemon(pokemon)">
         <div class="card-image">
           <img [src]="pokemon.picture">
         </div>

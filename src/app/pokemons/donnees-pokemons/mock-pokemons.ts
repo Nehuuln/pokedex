@@ -18,7 +18,7 @@ export const POKEMONS: Pokemon[] = [
         cp: 6,
         picture: "https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/pokedex/small/4.webp",
         types: ["Feu"],
-        rarete: "⭐",
+        rarete: "⭐⭐⭐⭐⭐",
         created: new Date()
     },
     {
@@ -58,7 +58,7 @@ export const POKEMONS: Pokemon[] = [
         cp: 6,
         picture: "https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/pokedex/small/19.webp",
         types: ["Normal"],
-        rarete: "⭐",
+        rarete: "⭐⭐⭐⭐",
         created: new Date()
     },
     {
@@ -108,7 +108,7 @@ export const POKEMONS: Pokemon[] = [
         cp: 5,
         picture: "https://qvexmeaxafazljnlsjbi.supabase.co/storage/v1/object/public/pokedex/small/35.webp",
         types: ["Fée"],
-        rarete: "⭐",
+        rarete: "⭐⭐⭐",
         created: new Date()
     },
     {
