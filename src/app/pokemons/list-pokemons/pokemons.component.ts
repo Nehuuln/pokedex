@@ -6,6 +6,7 @@ import { PokemonTypeColor } from '../pipes/pokemon-type-color.pipe';
 import { Router } from '@angular/router';
 import { PokemonsService } from '../pokemons.service';
 import { SearchPokemonComponent } from '../search-pokemon/search-pokemon.component';
+import { PokemonRaretePipe } from '../pipes/pokemon-rarete.pipe';
 
 @Component({
   standalone: true,
@@ -15,6 +16,7 @@ import { SearchPokemonComponent } from '../search-pokemon/search-pokemon.compone
     DatePipe,
     BorderCardDirective,
     PokemonTypeColor,
+    PokemonRaretePipe,
     SearchPokemonComponent
   ],
   templateUrl: './pokemons.component.html',

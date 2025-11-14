@@ -4,6 +4,7 @@ import { CommonModule, DatePipe } from '@angular/common';
 import { PokemonTypeColor } from '../pipes/pokemon-type-color.pipe';
 import { Router, ActivatedRoute } from '@angular/router';
 import { PokemonsService } from '../pokemons.service';
+import { PokemonRaretePipe } from '../pipes/pokemon-rarete.pipe';
 
 @Component({
   standalone: true,
@@ -12,7 +13,8 @@ import { PokemonsService } from '../pokemons.service';
   imports: [
     CommonModule,
     DatePipe,
-    PokemonTypeColor
+    PokemonTypeColor,
+    PokemonRaretePipe
   ]
 })
 export class DetailPokemonComponent implements OnInit{
