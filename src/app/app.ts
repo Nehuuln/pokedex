@@ -1,12 +1,14 @@
-import { Component, signal,inject } from '@angular/core';
+import { Component, signal, inject } from '@angular/core';
 import { RouterOutlet, Router } from '@angular/router';
 import { AuthService } from './auth/auth.service';
+import { SpinnerComponent } from './loading/loading-spinner.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, SpinnerComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
+  
 })
 export class App {
   protected readonly title = signal('pokedex-b3');
