@@ -19,8 +19,9 @@ import { PokemonTypeColor } from '../pipes/pokemon-type-color.pipe';
     BorderCardDirective,
     RarityColorDirective,
     PokemonTypeColor,
-    SearchPokemonComponent
-  ],
+    SearchPokemonComponent,
+    PokemonRaretePipe
+],
   templateUrl: './pokemons.component.html',
 })
 export class PokemonsComponentTs implements OnInit {

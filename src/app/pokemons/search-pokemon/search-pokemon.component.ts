@@ -38,5 +38,4 @@ export class SearchPokemonComponent implements OnInit{
     const link = ['/pokemon', pokemon.id];
     this.router.navigate(link);
   }
-
 }
